@@ -1,0 +1,40 @@
+{
+  "name": "express-project-template",
+  "version": "1.0.0",
+  "description": "Template for node projects in express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megh-khaire/Express-Project-Template.git"
+  },
+  "author": "Megh Khaire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megh-khaire/Express-Project-Template/issues"
+  },
+  "homepage": "https://github.com/megh-khaire/Express-Project-Template#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.0",
+    "helmet": "^4.1.1",
+    "hpp": "^0.2.3",
+    "joi": "^17.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.6",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.11",
+    "swagger-jsdoc": "^4.2.0",
+    "swagger-ui-express": "^4.1.4",
+    "winston": "^3.3.3",
+    "xss-clean": "^0.1.1"
+  }
+}
