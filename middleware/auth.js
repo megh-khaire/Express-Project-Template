@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
-const catchAsync = require('../config/catchAsync');
+const catchAsync = require('./middleware/catchAsync');
 const AppError = require('../config/appError');
 const {config} = require('../config/config')
 const {statuscodes} = require('../constants/constants');

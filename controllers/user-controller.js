@@ -2,7 +2,7 @@
 const validation = require('../validations/user-validation')
 const service = require('../services/user-service')
 const {response} = require('../services/general-service')
-const catchAsync = require('../config/catchAsync');
+const catchAsync = require('../middleware/catchAsync');
 const AppError = require('../config/appError')
 
 //Api to create new profile
