@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const result = dotenv.config({path: __dirname + '/.env'})
+dotenv.config()
 const app = require('./app')
 const swaggerUi = require('swagger-ui-express')
 const swaggerJSDoc = require('swagger-jsdoc');
@@ -8,16 +8,19 @@ const AppError = require('./config/appError');
 const globalErrorHandler = require('./controllers/error-controller')
 const {config} = require('./config/config')
 
+// Swagger setup
+// Definition
 const swaggerDefinition = {
     info: {
         title: 'My Website',
         version: '1.0.0',
-        description: 'Express API documentation for My Website',
+        description: 'Express API documentation for <Website>',
     },
     host: config.server.swagger_hostname,
     basePath: '/api/v2',
 };
   
+// Options
 const options = {
     swaggerDefinition: swaggerDefinition,
     explorer: true,
@@ -34,8 +37,7 @@ app.get('/swagger.json', (req, res) => {
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 //Establishing connection with the mongodb cluster
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { 
+mongoose.connect(config.database.uri, { 
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true

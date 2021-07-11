@@ -59,7 +59,6 @@ app.use(hpp()); //pass an object to specify whitelist
 
 //Importing routes 
 const userRouter = require('./routes/user-routes');
-const projectRouter = require('./routes/project-routes');
 
 const public = path.join(__dirname, 'public')
 app.use(express.static(public))
@@ -68,6 +67,6 @@ app.get('/', function(req, res) {
 });
 
 //View Routes
-app.use('/api/v2',[userRouter, projectRouter]);
+app.use('/api/v2',[userRouter]);
 
 module.exports = app;
